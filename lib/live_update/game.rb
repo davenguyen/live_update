@@ -4,8 +4,9 @@ module LiveUpdate
     GAME_TYPES = { CON: 'Conference', DIV: 'Division', PRO: 'Pro Bowl',
                    REG: 'Regular', WC: 'Wild Card' }.with_indifferent_access
 
-    attr_reader :_data, :home, :id, :possession, :quarter, :starts_at,
-      :clock, :type, :updated_at, :visitor
+    attr_reader :_data, :clock, :home, :home_name, :home_score, :id,
+      :possession, :quarter, :starts_at, :type, :updated_at, :visitor,
+      :visitor_name, :visitor_score
 
     def initialize(data)
       @_data = data
