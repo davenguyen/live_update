@@ -1,3 +1,7 @@
+require 'nfl_live_update/game'
+require 'nfl_live_update/schedule'
+require 'open-uri'
+
 module NFLLiveUpdate
-  # Your code goes here...
+  BASE_URL = 'http://www.nfl.com/liveupdate/'
 end
