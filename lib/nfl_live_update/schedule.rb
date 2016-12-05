@@ -4,8 +4,8 @@ module NFLLiveUpdate
 
     attr_reader :_data, :_xml, :games, :updated_at, :week, :year
 
-    def initialize
-      @_xml = open(BASE_URL + FEED_URL).read
+    def initialize(path = nil)
+      @_xml = open(path || (BASE_URL + FEED_URL)).read
       @updated_at = Time.now
       @_data = Hash.from_xml(_xml).deep_symbolize_keys!
       parse
