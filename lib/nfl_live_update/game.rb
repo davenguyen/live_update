@@ -1,6 +1,8 @@
 module NFLLiveUpdate
   class Game
     FEED_URL = 'scorestrip/ss.xml'
+    GAME_TYPES = { CON: 'Conference', DIV: 'Division', PRO: 'Pro Bowl',
+                   REG: 'Regular', WC: 'Wild Card' }.with_indifferent_access
 
     attr_reader :_data, :home, :id, :possession, :quarter, :starts_at,
       :clock, :type, :updated_at, :visitor
@@ -60,8 +62,7 @@ module NFLLiveUpdate
     end
 
     def parse_type
-      # TODO: Figure out what preseason and playoff game types are
-      @type = (_data[:gt] == 'REG') ? 'Regular' : _data[:gt]
+      @type = GAME_TYPES[_data[:gt]] || _data[:gt]
     end
   end
 end
