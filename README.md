@@ -1,4 +1,4 @@
-# NflLiveUpdate
+# NFLLiveUpdate
 Short description and motivation.
 
 ## Usage

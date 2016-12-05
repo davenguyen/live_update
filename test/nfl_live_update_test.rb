@@ -1,7 +1,7 @@
 require 'test_helper'
 
-class NflLiveUpdate::Test < ActiveSupport::TestCase
+class NFLLiveUpdate::Test < ActiveSupport::TestCase
   test "truth" do
-    assert_kind_of Module, NflLiveUpdate
+    assert_kind_of Module, NFLLiveUpdate
   end
 end

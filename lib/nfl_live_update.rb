@@ -1,3 +1,3 @@
-module NflLiveUpdate
+module NFLLiveUpdate
   # Your code goes here...
 end
