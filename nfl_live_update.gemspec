@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = NFLLiveUpdate::VERSION
   s.authors     = ["Dave Nguyen"]
   s.email       = ["Dave.Nguyen@inthenight.net"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of NFLLiveUpdate."
-  s.description = "TODO: Description of NFLLiveUpdate."
+  s.homepage    = "https://github.com/davenguyen/nfl_live_update"
+  s.summary     = "Get NFL schedules and live scores through official feeds."
+  s.description = "Get NFL schedules and live scores through official feeds."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
