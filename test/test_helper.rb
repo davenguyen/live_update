@@ -17,3 +17,24 @@ if ActiveSupport::TestCase.respond_to?(:fixture_path=)
   ActiveSupport::TestCase.file_fixture_path = ActiveSupport::TestCase.fixture_path + "/files"
   ActiveSupport::TestCase.fixtures :all
 end
+
+def file_path(name)
+  Rails.root.join('test', 'files', "#{name}.xml").to_s
+end
+
+%i(game schedule).each do |type|
+  define_method("#{type}_path") { file_path(type) }
+end
+
+def game_id_1
+  '2016120100'
+end
+
+def game_id_2
+  '2016120400'
+end
+
+def schedule(local_file = true)
+  path = local_file ? schedule_path : nil
+  @schedule ||= NFLLiveUpdate::Schedule.new(path)
+end

@@ -1,7 +1,12 @@
 require 'test_helper'
 
 class NFLLiveUpdate::Test < ActiveSupport::TestCase
-  test "truth" do
-    assert_kind_of Module, NFLLiveUpdate
+  test 'schedule has games' do
+    assert_equal schedule.games.count, 15
+  end
+
+  test 'game finality' do
+    assert_equal schedule.game(game_id_1).final?, true
+    assert_equal schedule.game(game_id_2).final?, false
   end
 end
