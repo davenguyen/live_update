@@ -11,6 +11,10 @@ module NFLLiveUpdate
       parse
     end
 
+    def game(id)
+      games.find { |game| game.id == id }
+    end
+
     private
 
     def parse
