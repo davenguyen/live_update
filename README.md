@@ -5,7 +5,7 @@ Get NFL schedules and live scores through official feeds.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'nfl_live_update'
+gem 'live_update'
 ```
 
 And then execute:
@@ -15,19 +15,19 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install nfl_live_update
+$ gem install live_update
 ```
 
 ## Usage
 
 ```ruby
 # Pull the latest schedule
-schedule = NFLLiveUpdate::Schedule.new
+schedule = LiveUpdate::Schedule.new
 
 # Grab some stats about the schedule
 schedule.week      #=> 14
 schedule.year      #=> 2016
-schedule.games     #=> [#<NFLLiveUpdate::Game>, ...]
+schedule.games     #=> [#<LiveUpdate::Game>, ...]
 
 # Get the raw data:
 schedule._data     #=> {:ss=>{:gms=>{:w=>"13", :y=>"2016", ...}}}

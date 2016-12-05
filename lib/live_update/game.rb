@@ -1,4 +1,4 @@
-module NFLLiveUpdate
+module LiveUpdate
   class Game
     FEED_URL = 'scorestrip/ss.xml'
     GAME_TYPES = { CON: 'Conference', DIV: 'Division', PRO: 'Pro Bowl',

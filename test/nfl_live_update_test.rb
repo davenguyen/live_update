@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NFLLiveUpdate::Test < ActiveSupport::TestCase
+class LiveUpdate::Test < ActiveSupport::TestCase
   test 'schedule has games' do
     assert_equal schedule.games.count, 15
   end

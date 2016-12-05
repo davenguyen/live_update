@@ -11,7 +11,7 @@ require "rails/test_unit/railtie"
 require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
-require "nfl_live_update"
+require "live_update"
 
 module Dummy
   class Application < Rails::Application

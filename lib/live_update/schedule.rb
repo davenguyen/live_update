@@ -1,4 +1,4 @@
-module NFLLiveUpdate
+module LiveUpdate
   class Schedule
     FEED_URL = 'scorestrip/ss.xml'
 

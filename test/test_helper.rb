@@ -36,5 +36,5 @@ end
 
 def schedule(local_file = true)
   path = local_file ? schedule_path : nil
-  @schedule ||= NFLLiveUpdate::Schedule.new(path)
+  @schedule ||= LiveUpdate::Schedule.new(path)
 end
